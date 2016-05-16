@@ -1,6 +1,6 @@
 /**
  * zoom.js - It's the best way to zoom an image
- * @version v0.0.2
+ * @version v0.0.3
  * @link https://github.com/fat/zoom.js
  * @license MIT
  */
@@ -163,7 +163,8 @@
     this._overlay           = document.createElement('div')
     this._overlay.className = 'zoom-overlay'
 
-    document.body.appendChild(this._overlay)
+    var container = document.getElementsByClassName("liquid-child")[0];
+    container.getElementsByClassName("liquid-container")[0].appendChild(this._overlay);
 
     this._calculateZoom()
     this._triggerAnimation()
